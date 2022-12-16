@@ -1,4 +1,7 @@
-p {
+@import url('https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation');
+
+body {
+	font-family: 'Rancho', sans-serif;
+	font-size: 48px;
 	color: black;
-	text-align: center;
 }
