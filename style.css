@@ -1,7 +1,73 @@
-@import url('https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 body {
-	font-family: 'Rancho', sans-serif;
-	font-size: 48px;
+	text-align: center;
+}
+  
+.wrapper {
+	display: inline-block;
+	margin: 0 auto;
+}
+  
+.card {
+	display: grid;
+	max-width: 300px;
+	grid-template-columns: 300px;
+	grid-template-rows: 210px 210px;
+	grid-template-areas: "image" "text";
+	place-items:  center;
+	border-radius: 18px;
+	background: white;
 	color: black;
+    font-family: 'Rubik', sans-serif;
+
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+	text-align: center;
+	cursor: pointer;
+	margin:30px;
+	
+	transition: .6s
+}
+  
+.card:hover {
+	transform:
+	  scale(1.05)
+	  perspective(500px)
+	  rotateX(5deg)
+	  rotateY(-5deg);
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+  
+.card-image {
+	grid-area: image;
+	margin-top: 25px;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+  
+.card-image img {
+	height: 100%;
+}
+  
+.card-text {
+	grid-area: text;
+	margin: 25px;
+}
+  
+.card-text .role {
+	color: rgb(255, 7, 110);
+	font-size: 13px;
+}
+  
+.card-text p {
+	color: grey;
+	font-size: 15px;
+	font-weight: 300;
+}
+  
+.card-text h2 {
+	margin-top: 0px;
+	font-size: 28px;
 }
