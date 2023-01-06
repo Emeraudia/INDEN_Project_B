@@ -19,14 +19,17 @@ body {
 	transform-style: preserve-3d;
 	margin: 30px;
 	font-family: 'Rubik', sans-serif;
+
+	--rX: 5;
+	--rY: 180;
 }
   
 .wrapper:hover .card{
 	transform:
 	  scale(1.05)
 	  perspective(500px)
-	  rotateX(5deg)
-	  rotateY(180deg);
+	  rotateX(rX)
+	  rotateY(rY);
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
@@ -49,7 +52,9 @@ body {
 	color: black;
 	text-align: center;
 	cursor: pointer;
-	
+	outline: solid 4px;
+	outline-offset: -10px;
+
 	transform: rotateY(180deg);
 }
 
