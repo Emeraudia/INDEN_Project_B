@@ -1,12 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
-body {
-	text-align: center;
+html {
+	--color_dark: #353531;
+	--color_light: #faf3dd;
+	--color_1: #ff9505;
+
+	--font_size_big: 48px;
+	--font_size_medium: 26px;
+	--font_size_small: 15px;
+
+	min-height: 100%;
+    margin: 0;
 }
-  
+
+body {
+	min-height: 100%;
+    margin: 0;
+
+	text-align: center;
+	background-color: var(--color_light);
+	color: var(--color_dark);
+}
+
+h1 {
+	text-align: center;
+	font-size: var(--font_size_big);
+}
+
+b {
+	transition: .6s;
+}
+
+b:hover {
+	text-shadow: 0px 0px 10px var(--color_1);
+}
+
+p {
+	text-align: justify;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: var(--font_size_small);
+}
+
+.dark_background {
+	background-color: var(--color_dark);
+	color: white;
+	padding-top: 30px;
+	margin: 0 auto;
+	height: 100%;
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.9);
+}
+
+.light_background {
+	background-color: var(--color_light);
+	color: black;
+}
+
+
 .wrapper {
 	display: inline-block;
-	margin: 0 auto;
+	margin: 30px;
 }
 
 .card {
@@ -15,7 +70,7 @@ body {
 	height: 420px;
 	border-radius: 18px;
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-	transition: .6s;
+	transition: .3s;
 	transform-style: preserve-3d;
 	margin: 30px;
 	font-family: 'Rubik', sans-serif;
@@ -25,7 +80,12 @@ body {
 }
   
 .wrapper:hover .card{
-	box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+	transform:
+	  scale(1.05)
+	  perspective(500px)
+	  rotateX(calc(var(--rX) * 1deg))
+	  rotateY(calc(var(--rY) * 1deg));
+	box-shadow: 0px 0px 15px var(--color_1);
 }
 
 .card-back, .card-front{
@@ -34,6 +94,7 @@ body {
 	height: 100%;
 	border-radius: 18px;
 	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .card-front {
@@ -48,13 +109,14 @@ body {
 	text-align: center;
 	cursor: pointer;
 	outline: solid 4px;
+	outline-color: var(--color_1);
 	outline-offset: -10px;
 
 	transform: rotateY(180deg);
 }
 
 .card-back {
-	background-color: darkred;
+	background-color: var(--color_1);
 	text-align: center;
 }
   
@@ -77,17 +139,20 @@ body {
 }
   
 .card-text .role {
-	color: rgb(255, 7, 110);
-	font-size: 13px;
+	color: var(--color_1);
+	font-size: var(--font_size_small);
+
 }
   
 .card-text p {
+	text-align: center;
 	color: grey;
-	font-size: 15px;
+	font-size: var(--font_size_small);
 	font-weight: 300;
 }
   
 .card-text h2 {
+	font-style: italic;
 	margin-top: 0px;
-	font-size: 28px;
+	font-size: var(--font_size_medium);
 }
