@@ -25,11 +25,6 @@ body {
 }
   
 .wrapper:hover .card{
-	transform:
-	  scale(1.05)
-	  perspective(500px)
-	  rotateX(calc(var(--rX) * 1deg))
-	  rotateY(calc(var(--rY) * 1deg));
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
