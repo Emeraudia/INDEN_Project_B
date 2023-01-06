@@ -152,6 +152,7 @@ p {
 }
   
 .card-text h2 {
+	font-style: italic;
 	margin-top: 0px;
 	font-size: var(--font_size_medium);
 }
