@@ -27,9 +27,20 @@ h1 {
 	font-size: var(--font_size_big);
 }
 
+b {
+	transition: .6s;
+}
+
+b:hover {
+	text-shadow: 0px 0px 10px var(--color_1);
+}
+
 p {
 	text-align: justify;
-	margin: 30px;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	font-size: var(--font_size_small);
 }
 
@@ -130,6 +141,7 @@ p {
 .card-text .role {
 	color: var(--color_1);
 	font-size: var(--font_size_small);
+
 }
   
 .card-text p {
