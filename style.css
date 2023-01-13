@@ -76,7 +76,7 @@ p {
 	pointer-events: none;
 
 	--rX: 0;
-	--rY: 180;
+	--rY: 0;
 
 	transform:
 		perspective(500px)

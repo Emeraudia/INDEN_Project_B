@@ -17,7 +17,6 @@ class TitlEffect {
 
     handleMouseMove(event) {
         const {offsetX, offsetY} = event;
-        console.log(event);
         
         let X;
         let Y;
@@ -30,6 +29,7 @@ class TitlEffect {
     }
 
     handleMouseEnter() {
+        this.setProperty("transition", ".1s")
         this.mouseOnComponent = true;
     }
 
@@ -39,8 +39,9 @@ class TitlEffect {
     }
 
     defaultStates() {
-        this.setProperty('--rY', 180);
-        this.setProperty('--rX', 0);
+        this.setProperty("transition", ".3s");
+        this.setProperty('--rY', 0);
+        this.setProperty('--rX', 180);
     }
 
     setProperty(p, v) {
