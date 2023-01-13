@@ -74,18 +74,17 @@ p {
 	margin: 30px;
 	font-family: 'Rubik', sans-serif;
 	pointer-events: none;
-	transition: .3s;
 
-	--rX: 5;
+	--rX: 0;
 	--rY: 180;
+
+	transform:
+		perspective(500px)
+		rotateX(calc(var(--rX) * 1deg))
+		rotateY(calc(var(--rY) * 1deg));
 }
   
 .wrapper:hover .card{
-	transform:
-	  scale(1.05)
-	  perspective(500px)
-	  rotateX(calc(var(--rX) * 1deg))
-	  rotateY(calc(var(--rY) * 1deg));
 	box-shadow: 0px 0px 15px var(--color_1);
 }
 

@@ -2,7 +2,7 @@ class TitlEffect {
     constructor({element}) {
         this.element = element;
         this.card = this.element.querySelector(".card");
-        this.size = [360, 480];
+        this.size = [340, 480];
         [this.w, this.h] = this.size;
 
         this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -25,7 +25,6 @@ class TitlEffect {
         X = 180 + (-(offsetX - (this.w/2)) / 3) / 3;
         Y = ((offsetY - (this.h/2)) / 3) / 3;
         console.log(offsetX+" "+offsetY);
-
         this.setProperty('--rY', X.toFixed(2));
         this.setProperty('--rX', Y.toFixed(2));
     }
@@ -40,7 +39,7 @@ class TitlEffect {
     }
 
     defaultStates() {
-        this.setProperty('--rY', 0);
+        this.setProperty('--rY', 180);
         this.setProperty('--rX', 0);
     }
 
