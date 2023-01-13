@@ -2,7 +2,7 @@ class TitlEffect {
     constructor({element}) {
         this.element = element;
         this.card = this.element.querySelector(".card");
-        this.size = [300, 420];
+        this.size = [360, 480];
         [this.w, this.h] = this.size;
 
         this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -17,12 +17,14 @@ class TitlEffect {
 
     handleMouseMove(event) {
         const {offsetX, offsetY} = event;
+        console.log(event);
         
         let X;
         let Y;
 
         X = 180 + (-(offsetX - (this.w/2)) / 3) / 3;
         Y = ((offsetY - (this.h/2)) / 3) / 3;
+        console.log(offsetX+" "+offsetY);
 
         this.setProperty('--rY', X.toFixed(2));
         this.setProperty('--rX', Y.toFixed(2));

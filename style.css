@@ -70,10 +70,11 @@ p {
 	height: 420px;
 	border-radius: 18px;
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-	transition: .3s;
 	transform-style: preserve-3d;
 	margin: 30px;
 	font-family: 'Rubik', sans-serif;
+	pointer-events: none;
+	transition: .3s;
 
 	--rX: 5;
 	--rY: 180;
