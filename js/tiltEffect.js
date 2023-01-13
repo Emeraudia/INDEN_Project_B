@@ -40,8 +40,8 @@ class TitlEffect {
 
     defaultStates() {
         this.setProperty("transition", ".3s");
-        this.setProperty('--rY', 0);
-        this.setProperty('--rX', 180);
+        this.setProperty('--rY', 180);
+        this.setProperty('--rX', 0);
     }
 
     setProperty(p, v) {
